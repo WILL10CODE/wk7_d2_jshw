@@ -57,6 +57,8 @@ Will.printInfo()
 const Mark = new Person('Mark', 25)
 Mark.printInfo()
 Mark.addAge()
+Mark.addAge()
+Mark.addAge()
 Mark.printInfo()
 
 // Create another arrow function for the addAge method that takes a single parameter
