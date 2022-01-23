@@ -20,10 +20,13 @@ let person3 = {
 
 
 const favoriteFood = (person) => {
-    console.log(person) 
+    for (key in person){
+        console.log(person[key])
+
+    }
 }
 
-favoriteFood(person3['tacos'])
+favoriteFood(person3)
 //=======Exercise #2=========//
 /*
 Write an object prototype for a Person that has a name and age, has a
@@ -72,17 +75,22 @@ Mark.printInfo()
     If the length is greater than ten console log "Big word". 
     If the length of the string is less than 10 console log "Small Number"
 */ 
-const theLength = (num) => {
+const theLength = (string) => {
     return new Promise((resolve, reject) => {
-        if (num > 10) {
+        if (string.length > 10) {
             resolve("Big Word")
-        } else if (num < 10) {
+        } else if (string.length < 10) {
             reject("Small Number")
         }
     })
 };
-
-console.log(theLength(15))
+theLength("hello")
+    .then((result) => {
+        console.log("Big Word")
+    })
+    .catch((error) => {
+        console.log("Small Number")
+    })
 
 
 
